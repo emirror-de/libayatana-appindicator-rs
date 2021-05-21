@@ -1,0 +1,20 @@
+[package]
+name = "libayatana-appindicator-sys"
+version = "0.1.0"
+authors = ["Lewin Probst <info@emirror.de>"]
+description = "Raw rust bindings for libayatana-appindicator shared library."
+license = "LGPL-3.0"
+homepage = "https://github.com/emirror-de/libayatana-appindicator-rs"
+repository = "https://github.com/emirror-de/libayatana-appindicator-rs.git"
+readme = "README.md"
+keywords = ["bindings"]
+build = "build.rs"
+categories = ["external-ffi-bindings"]
+edition = "2018"
+
+[dependencies]
+gtk-sys = "^0.10.0"
+
+[build-dependencies]
+bindgen = "^0.58.1"
+pkg-config = "^0.3.19"
