@@ -1,6 +1,6 @@
 [package]
 name = "libayatana-appindicator"
-version = "0.1.1-alpha.0"
+version = "0.1.1"
 authors = ["Lewin Probst <info@emirror.de>"]
 description = "Rust bindings for libayatana-appindicator shared library."
 license = "LGPL-3.0"
