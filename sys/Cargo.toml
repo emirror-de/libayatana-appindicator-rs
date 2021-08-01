@@ -13,7 +13,7 @@ categories = ["external-ffi-bindings"]
 edition = "2018"
 
 [dependencies]
-gtk-sys = "^0.10.0"
+gtk-sys = "^0.14.0"
 
 [build-dependencies]
 bindgen = "^0.58.1"
