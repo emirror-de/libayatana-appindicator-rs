@@ -3,7 +3,7 @@ extern crate gtk;
 extern crate gtk_sys;
 extern crate libayatana_appindicator_sys;
 
-use glib::translate::ToGlibPtr;
+use gtk::glib::translate::ToGlibPtr;
 use libayatana_appindicator_sys::AppIndicator as AppIndicatorRaw;
 pub use libayatana_appindicator_sys::*;
 
