@@ -12,6 +12,14 @@ Raw rust bindings for use with libayatana-appindicator.
 
 Rust bindings for libayatana-appindicator shared library.
 
+### Dependencies
+
+To remove unnecessary build dependencies, the crate provides a static generated binding file by default. However, if you want to generate the raw bindings on every build, add the following line to your `Cargo.toml` file:
+```toml
+libayatana-appindicator = { version = "0.1.5", features = ["dynamic"]}
+```
+When using with the dynamic feature, the [libayatana-appindicator-sys](##libayatana-appindicator-sys) crate is used as build dependency that generates the bindings file for you.
+
 ## License
 
 LGPL-3.0
