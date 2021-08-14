@@ -10,9 +10,12 @@ readme = "README.md"
 keywords = ["bindings"]
 edition = "2018"
 
+[features]
+dynamic = ["libayatana-appindicator-sys"]
+
 [dependencies]
 log = "^0.4.14"
 glib = "^0.10.3"
 gtk = "^0.14.0"
 gtk-sys = "^0.14.0"
-libayatana-appindicator-sys = { path = "../sys", version = "^0.1.4" }
+libayatana-appindicator-sys = { path = "../sys", version = "^0.1.4", optional = true }

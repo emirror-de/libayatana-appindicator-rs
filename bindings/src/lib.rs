@@ -1,11 +1,21 @@
 extern crate glib;
 extern crate gtk;
 extern crate gtk_sys;
+#[cfg(feature = "dynamic")]
 extern crate libayatana_appindicator_sys;
 
 use gtk::glib::translate::ToGlibPtr;
+#[cfg(feature = "dynamic")]
 use libayatana_appindicator_sys::AppIndicator as AppIndicatorRaw;
+#[cfg(feature = "dynamic")]
 pub use libayatana_appindicator_sys::*;
+
+#[cfg(not(feature = "dynamic"))]
+mod bindings;
+#[cfg(not(feature = "dynamic"))]
+use crate::bindings::AppIndicator as AppIndicatorRaw;
+#[cfg(not(feature = "dynamic"))]
+pub use crate::bindings::*;
 
 pub struct AppIndicator {
     air: *mut AppIndicatorRaw,
