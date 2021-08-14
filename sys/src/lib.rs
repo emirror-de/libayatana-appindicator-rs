@@ -17,4 +17,4 @@ use gtk_sys::{
     GtkWidgetPrivate,
 };
 
-include!("../build/bindings.rs");
+include!(concat!(env!("OUT_DIR"), "/bindings.rs"));

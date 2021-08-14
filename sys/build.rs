@@ -1,6 +1,7 @@
 extern crate bindgen;
 extern crate pkg_config;
 
+use std::env;
 use std::path::PathBuf;
 
 const LIBRARY_NAME: &'static str = "ayatana-appindicator3";
@@ -23,7 +24,7 @@ fn write_bindings(library: pkg_config::Library) {
     let gen_bindings =
         bindings.generate().expect("Unable to generate bindings");
 
-    let out_path = PathBuf::from("./build");
+    let out_path = PathBuf::from(env::var("OUT_DIR").unwrap());
     gen_bindings
         .write_to_file(out_path.join("bindings.rs"))
         .expect("Couldn't write bindings!");
