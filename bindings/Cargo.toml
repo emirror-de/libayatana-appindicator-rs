@@ -1,6 +1,6 @@
 [package]
 name = "libayatana-appindicator"
-version = "0.1.6"
+version = "0.2.0"
 authors = ["Lewin Probst <info@emirror.de>"]
 description = "Rust bindings for libayatana-appindicator shared library."
 license = "LGPL-3.0"
@@ -15,7 +15,7 @@ dynamic = ["libayatana-appindicator-sys"]
 
 [dependencies]
 log = "^0.4.14"
-glib = "^0.10.3"
-gtk = "^0.14.0"
-gtk-sys = "^0.14.0"
-libayatana-appindicator-sys = { path = "../sys", version = "^0.1.6", optional = true }
+glib = "^0.15"
+gtk = "^0.15.0"
+gtk-sys = "^0.15.0"
+libayatana-appindicator-sys = { path = "../sys", version = "^0.2", optional = true }
